@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Browser from '@/behaviors/Browser'
 
 Vue.config.productionTip = false
 
@@ -11,6 +12,10 @@ Vue.config.errorHandler = (err, vm, info) => {
   console.log('vm', vm)
   console.log('info', info)
 }
+
+window.addEventListener('beforeunload', e => {
+  Browser.close();
+})
 
 /* eslint-disable no-new */
 new Vue({

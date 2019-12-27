@@ -13,6 +13,7 @@ class Camp extends Base {
 
     this.success(callback, data);
   }
+
 }
 
 export default Camp;

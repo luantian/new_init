@@ -1,6 +1,6 @@
-import Http from '@/models/Http'
+import Http from '@/Http'
 
-class Base  extends Http {
+class Base extends Http {
   constructor() {
     super()
   }
@@ -14,13 +14,13 @@ class Base  extends Http {
     console.log('ajax请求错误');
   }
 
-  static success(success, data) {
+  static success(callback, data) {
 
     if (data.status != 200) return this.ajax_error();
 
     if (data.data.code != 200) return this.api_error();
 
-    success && success(data.data);
+    callback && callback(data.data);
 
   }
 }
