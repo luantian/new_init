@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-two">
       pageTwo
     </div>
 </template>

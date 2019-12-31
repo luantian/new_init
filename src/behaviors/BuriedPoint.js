@@ -1,9 +1,9 @@
-let pvs = [];
-let uvs = [];
-
 import Base from '@/behaviors/Base'
 
 class BuriedPoint extends Base {
+
+  static pvs = [];
+  static uvs = [];
 
   /**
    * @param params
@@ -11,8 +11,7 @@ class BuriedPoint extends Base {
    * param.time
    */
   static recordTime(params) {
-    pvs.push(params)
-    console.log(pvs)
+    BuriedPoint.pvs.push(params)
   }
 
   /**
@@ -22,7 +21,7 @@ class BuriedPoint extends Base {
    * param.time
    */
   static recordOpera(params) {
-    uvs.push(params)
+    BuriedPoint.uvs.push(params)
   }
 
 }
