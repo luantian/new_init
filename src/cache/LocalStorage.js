@@ -6,7 +6,7 @@ class LocalStorage {
   }
 
   static getItem(key) {
-    return JSON.stringify(localStorage.getItem(key));
+    return JSON.parse(localStorage.getItem(key));
   }
 
 }

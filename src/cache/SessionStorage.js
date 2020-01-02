@@ -6,7 +6,7 @@ class SessionStorage {
   }
 
   static getItem(key) {
-    return JSON.stringify(sessionStorage.getItem(key));
+    return JSON.parse(sessionStorage.getItem(key));
   }
 
 }

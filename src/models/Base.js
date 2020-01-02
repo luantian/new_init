@@ -1,4 +1,5 @@
 import Http from '@/Http'
+import BaseException from '@/exception/Base'
 
 class Base extends Http {
   constructor() {
@@ -7,7 +8,7 @@ class Base extends Http {
 
   static api_error(data) {
     console.log('data', data);
-    console.log(data.msg);
+    throw new BaseException(data.msg)
   }
 
   static ajax_error() {
@@ -18,7 +19,7 @@ class Base extends Http {
 
     if (data.status != 200) return this.ajax_error();
 
-    if (data.data.code != 200) return this.api_error();
+    if (data.data.code != 200) return this.api_error(data.data);
 
     callback && callback(data.data);
 

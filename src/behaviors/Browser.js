@@ -7,10 +7,6 @@ class Brower extends Base {
     super()
   }
 
-  static open() {
-
-  }
-
   static close() {
     console.log('window_close');
   }

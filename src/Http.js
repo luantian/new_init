@@ -17,7 +17,7 @@ service.interceptors.request.use(
   config => {
     config.headers = {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      'token': 'f5a51f2ec52adf38899ac4ee27de9b72'
+      'token': '5aae758c4e632cd6a53e4899b84e7f2a'
     };
     // 发送请求之前
     if (config.method === 'post') {

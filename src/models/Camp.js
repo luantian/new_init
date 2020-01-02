@@ -7,7 +7,7 @@ class Camp extends Base {
 
   static async getList(params, callback) {
     let data = await this.post({
-      url: '/campsignup/camplist',
+      url: '/campsignup/camplist1',
       data: params
     })
 
